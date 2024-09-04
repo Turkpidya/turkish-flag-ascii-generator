@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Turkish Flag ASCII Art Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="turkpidya-flag-container">
+        <h1>Enhanced Turkish Flag ASCII Art Generator</h1>
+        <div class="controls">
+            <div>
+                <label for="width">Flag Width (30-100):</label>
+                <input type="number" id="width" min="30" max="100" value="50">
+            </div>
+            <div>
+                <label for="style">ASCII Style:</label>
+                <select id="style">
+                    <option value="basic">Basic (█★☾)</option>
+                    <option value="detailed">Detailed (▓▒░✦☽)</option>
+                    <option value="minimal">Minimal ([]O)</option>
+                    <option value="dots">Dots (•◦○●)</option>
+                    <option value="ascii">ASCII (#*@)</option>
+                    <option value="random">Random</option>
+                </select>
+            </div>
+            <div>
+                <label for="color">Color:</label>
+                <select id="color">
+                    <option value="red">Red</option>
+                    <option value="white">White on Red</option>
+                    <option value="blackwhite">Black and White</option>
+                    <option value="random">Random</option>
+                </select>
+            </div>
+        </div>
+        <div class="button-group">
+            <button onclick="generateFlag()" aria-label="Generate Flag">Generate Flag</button>
+            <button onclick="copyToClipboard()" aria-label="Copy to Clipboard">Copy to Clipboard</button>
+            <button onclick="downloadTxt()" aria-label="Download as TXT">Download as TXT</button>
+            <button onclick="shareFlag()" aria-label="Share Flag">Share Flag</button>
+        </div>
+        <div id="stylePreview" class="style-preview"></div>
+        <div id="flagOutput"></div>
+        <div id="shareLink"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
